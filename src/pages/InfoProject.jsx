@@ -5,7 +5,7 @@ import ToDo from "../assets/ToDo.jpg";
 export default function InfoProject() {
 	return (
 		<div className="bg-white h-3/4 w-3/4 flex bg-slate-200">
-			<article className="flex flex-col h-full w-2/4 gap-2 items-center justify-center bg-slate-200 text-center p-2">
+			<article className="flex flex-col h-full w-2/4 gap-2 items-center justify-center bg-white text-center p-2">
 				<p className="text-xl">Sobre o To-Do</p>
 				<p className="text-black leading-5">
 					Fiz esse projeto utilizando a biblioteca <a href="#">React</a>, para a

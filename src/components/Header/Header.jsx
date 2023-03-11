@@ -46,7 +46,7 @@ export default function Header() {
 				</nav>
 			</div>
 			<div className="h-1/4 w-full flex justify-center items-center gap-20 relative">
-				<div className="absolute bottom-0 flex justify-center w-full gap-8">
+				<div className="absolute bottom-0 flex justify-center w-full gap-8 mb-6">
 					<a
 						href="https://github.com/FelipeFernandes777"
 						className="text-white text-md"

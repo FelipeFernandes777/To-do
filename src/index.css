@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
+
+.title_tasks {
+	@apply text-gray-900 text-xl  leading-10 border-b-2 w-10/12 border-black flex justify-center items-center mb-4;
+}
+
 @tailwind utilities;
