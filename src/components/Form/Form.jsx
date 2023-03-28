@@ -3,7 +3,9 @@ import React, { useState, useEffect } from "react";
 export default function Form({ sendValue }) {
 	const [task, setTask] = useState([]);
 	const [taskOne, setTaskOne] = useState("");
-
+	
+	console.log('funcionou')
+	
 	const onSubmit = (event) => {
 		event.preventDefault();
 
@@ -39,6 +41,7 @@ export default function Form({ sendValue }) {
 					Cadastrar
 				</button>
 			</div>
+
 		</form>
 	);
 }
