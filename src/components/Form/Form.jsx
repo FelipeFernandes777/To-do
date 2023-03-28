@@ -4,7 +4,7 @@ export default function Form({ sendValue }) {
 	const [task, setTask] = useState([]);
 	const [taskOne, setTaskOne] = useState("");
 	
-	console.log('funcionou')
+	
 	
 	const onSubmit = (event) => {
 		event.preventDefault();
