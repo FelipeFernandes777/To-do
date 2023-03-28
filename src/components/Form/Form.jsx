@@ -30,13 +30,13 @@ export default function Form({ sendValue }) {
 			<div className="w-full relative flex items-center gap-3">
 				<input
 					type="text"
-					className="bg-gray-500 rounded-md w-3/4 h-10 text-xl text-black p-2"
+					className="bg-gray-400 rounded-md w-5/6 h-10 text-xl text-black p-2 max-sm:w-4/6"
 					onChange={(e) => setTaskOne(e.target.value)}
 					placeholder="Digite a sua tarefa"
 					required
 				/>
-				<button className="rounded-md w-1/4 text-white bg-gray-800 gap-3 flex items-center justify-center h-10 mr-3">
-					Cadastrar Tarefa
+				<button className="rounded-md w-1/4 text-white bg-gray-800 gap-3 flex items-center justify-center h-10 mr-3 max-sm:text-sm max-sm:gap-0">
+					Cadastrar
 				</button>
 			</div>
 		</form>
