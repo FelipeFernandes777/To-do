@@ -4,30 +4,19 @@ export default function Form({ sendValue }) {
 	const [task, setTask] = useState([]);
 	const [taskOne, setTaskOne] = useState("");
 
-	// Load tasks in my local storage
-	useEffect(() => {
-		const savedTasks = JSON.parse(localStorage.getItem("tasks"));
-		if (savedTasks) {
-			setTask(savedTasks);
-		}
-	}, []);
-
-	// Update local storage whenever the task array changes
-	useEffect(() => {
-		localStorage.setItem("tasks", JSON.stringify(task));
-	}, [task]);
-
 	const onSubmit = (event) => {
+		event.preventDefault();
+
 		if (!task.includes(taskOne)) {
-			// Add the task in array
 			setTask([...task, taskOne]);
-			// Send task for parents
-			sendValue(returnValueOfTasks(task));
 		} else {
 			setTaskOne("");
 		}
-		event.preventDefault();
 	};
+
+	useEffect(() => {
+		sendValue(returnValueOfTasks(task));
+	}, [task, sendValue])
 
 	const returnValueOfTasks = (value) => {
 		return value;

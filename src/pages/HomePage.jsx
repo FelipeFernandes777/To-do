@@ -10,10 +10,9 @@ export default function HomePage() {
 		<div className="h-full w-full flex flex-col items-center relative">
 			<h3 className="title_tasks">Tarefas</h3>
 			<div id="tasks_container">
-				<Tasks task="teste" />
 				{value &&
 					value.map((valueTask) => {
-						return <Tasks task={valueTask} />;
+						return <Tasks task={valueTask} key={valueTask} />;
 					})}
 			</div>
 
