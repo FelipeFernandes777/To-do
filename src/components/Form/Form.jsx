@@ -3,9 +3,7 @@ import React, { useState, useEffect } from "react";
 export default function Form({ sendValue }) {
 	const [task, setTask] = useState([]);
 	const [taskOne, setTaskOne] = useState("");
-	
-	
-	
+
 	const onSubmit = (event) => {
 		event.preventDefault();
 
@@ -15,10 +13,17 @@ export default function Form({ sendValue }) {
 			setTaskOne("");
 		}
 	};
-
 	useEffect(() => {
 		sendValue(returnValueOfTasks(task));
 	}, [task, sendValue])
+
+	useEffect(() => {
+		localStorage.setItem(`tarefas`, [JSON.stringify(task)])
+	}, [task])
+
+	useEffect(() => {
+		localStorage.getItem('tarefas')
+	}, [])
 
 	const returnValueOfTasks = (value) => {
 		return value;
