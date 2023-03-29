@@ -1,8 +1,27 @@
 @tailwind base;
 @tailwind components;
 
+.body_container {
+	@apply bg-slate-200 h-screen w-screen flex;
+}
+
 .title_tasks {
 	@apply text-gray-900 text-xl  leading-10 border-b-2 w-10/12 border-black flex justify-center items-center mb-4;
+}
+.show_menu {
+	@apply max-sm:block max-sm:text-lg max-sm:absolute max-sm:left-0 max-sm:text-lg max-sm:top-2 max-sm:w-full max-sm:h-auto hidden max-sm:flex max-sm:justify-center max-sm:items-center text-black;
+}
+
+.header_container {
+	@apply h-full w-2/12 mr-4 relative;
+}
+
+.header_display {
+	@apply w-full h-full bg-gray-900 max-sm:hidden;
+}
+
+.main_container {
+	@apply h-full w-10/12 flex items-center justify-center max-sm:w-full;
 }
 
 @tailwind utilities;
