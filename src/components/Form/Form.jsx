@@ -13,10 +13,17 @@ export default function Form({ sendValue }) {
 			setTaskOne("");
 		}
 	};
-
 	useEffect(() => {
 		sendValue(returnValueOfTasks(task));
 	}, [task, sendValue])
+
+	useEffect(() => {
+		localStorage.setItem(`tarefas`, [JSON.stringify(task)])
+	}, [task])
+
+	useEffect(() => {
+		localStorage.getItem('tarefas')
+	}, [])
 
 	const returnValueOfTasks = (value) => {
 		return value;
@@ -39,6 +46,7 @@ export default function Form({ sendValue }) {
 					Cadastrar
 				</button>
 			</div>
+
 		</form>
 	);
 }
